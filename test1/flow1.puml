@@ -1,10 +1,35 @@
 @startuml
-(*)  --> "check input"
-If "input is verbose" then
---> [Yes] "turn on verbosity"
---> "run command"
-else
---> "run command"
-Endif
--->(*)
+|教务处|
+:安排考试;
+:考试安排表;
+|教师|
+:出卷;
+fork
+:A、B试卷;
+fork again
+|教师|
+:打印审批表;
+|系主任|
+:审批签字;
+:打印审批表;
+end fork
+|教务处|
+:打印试卷;
+:试卷;
+|学生|
+:参加考试;
+:答卷;
+|教师|
+fork
+:答卷;
+:装订存档;
+fork again
+:成绩单;
+if(有不及格？) then(有)
+:安排补考;
+:补考安排表;
+endif
+endfork
+:期末流程结束;
+stop
 @enduml

@@ -11,7 +11,7 @@
 
 ```
 #### 业务流程图如下：
-![image](https://github.com/201610414311/is_analysis/blob/master/test1/UMLtest.png)
+![image](https://github.com/z915287285/is_analysis/blob/master/test1/flow1.png)
 #### 流程说明：
 ```
 期末考试前三周，教务处负责安排全校课程的考试时间和地点，下发“考试安排表”。考试前一周，各任课教师准备好A、B两份试卷，  

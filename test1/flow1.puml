@@ -20,16 +20,24 @@ end fork
 :参加考试;
 :答卷;
 |教师|
+:阅卷出成绩;
 fork
 :答卷;
 :装订存档;
 fork again
 :成绩单;
+|教务处|
 if(有不及格？) then(有)
 :安排补考;
+fork
 :补考安排表;
+fork again
+end fork
+else
+end
 endif
-endfork
+end fork
+|教师|
 :期末流程结束;
 stop
 @enduml

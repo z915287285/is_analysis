@@ -11,5 +11,38 @@
 + 整个文档要汇总到REMADE.md文本文件中进行说明，说明文件用Markdown格式编写。
 
 ## 图书管理的用例关系
+### Puml代码如下:
+``
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+rectangle {
+actor Library_Admin
+}
+rectangle {
+actor Reader
+}
+rectangle 图书管理系统用例关系图分析{
+rectangle {
+Library_Admin ->(Lend Book):借书登记
+Library_Admin -->(Return Book):归还书籍登记
+Library_Admin -->(Manage Book):书籍信息管理
+Library_Admin -->(Manage ReaderInfo):读者信息管理
+}
+rectangle {
+(Select Book)<-- Reader:读者查询书籍信息
+(Select State)<-- Reader:读者查看当前借阅状态
+(Borrow Book)<-- Reader:借阅书籍
+(Back Book)<-- Reader:归还书籍
+(Late application)<-- Reader:逾期申请
+(Compensation book)<--Reader:赔偿书籍
+}
+}
+
+@enduml
+``
+[代码链接](https://github.com/z915287285/is_analysis/blob/master/test2/usercase.puml)
+关系用例图:
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase.png)
 
 ## 参与者说明

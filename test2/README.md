@@ -12,7 +12,7 @@
 
 ## 图书管理的用例关系
 ### Puml代码如下:
-``
+````
 @startuml
 left to right direction
 skinparam packageStyle rectangle
@@ -40,7 +40,9 @@ rectangle {
 }
 
 @enduml
-``
+````
+
+
 [代码链接](https://github.com/z915287285/is_analysis/blob/master/test2/usercase.puml)
 关系用例图:
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase.png)

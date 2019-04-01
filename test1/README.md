@@ -53,7 +53,7 @@ fork
 :补考安排表;
 fork again
 end fork
-else
+else(无)
 end
 endif
 end fork

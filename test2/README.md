@@ -2,7 +2,7 @@
 =========================
 | 学号         | 班级         | 姓名 | 图片 |
 |--------------|--------------|------|------|
-| 201610414330 | 软件(本)16-3 | 朱泓超 |![image](https://github.com/z915287285/is_analysis/blob/master/test2/zz.jpg)
+| 201610414330 | 软件(本)16-3 | 朱泓超 |![image](https://github.com/z915287285/is_analysis/blob/master/test2/zz.jpg)|
 ## 实验目的
 + 理解用例(Use Case)的意义和作用，并能用PlantUML工具绘制用例图。
 + 仔细阅读并理解第7章用例建模。

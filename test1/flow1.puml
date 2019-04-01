@@ -27,13 +27,13 @@ fork
 fork again
 :成绩单;
 |教务处|
-if(有不及格？) then(有)
+if(有不及格？)then(有)
 :安排补考;
 fork
 :补考安排表;
 fork again
 end fork
-else
+else(无)
 end
 endif
 end fork

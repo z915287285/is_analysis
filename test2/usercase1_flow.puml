@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+rectangle {
+actor Library_Admin
+}
+rectangle {
+actor Reader
+}
+rectangle {
+Library_Admin ->(Lend Book)
+Library_Admin -->(Return Book)
+Library_Admin -->(Manage Book)
+Library_Admin -->(Manage ReaderInfo)
+
+(Select Book)<-- Reader
+(Select State)<-- Reader
+(Borrow Book3)<-- Reader
+(Borrow Book)<-- Reader
+
+}
+
+@enduml

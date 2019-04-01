@@ -7,7 +7,7 @@ actor Library_Admin
 rectangle {
 actor Reader
 }
-rectangle {
+rectangle 图书管理系统用例关系图分析{
 rectangle {
 Library_Admin ->(Lend Book):借书登记
 Library_Admin -->(Return Book):归还书籍登记

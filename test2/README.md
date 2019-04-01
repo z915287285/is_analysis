@@ -47,6 +47,7 @@ rectangle {
 
 
 关系用例图:
+
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase.png)
 
 ## 参与者说明

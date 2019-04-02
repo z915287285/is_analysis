@@ -1,0 +1,13 @@
+@startuml
+start
+:Reader;
+if (Select ReaderState) then(未借阅)
+else(已借阅)
+if(无法按时归还)then(Yes)
+:Late application;
+else(No)
+:Back Book;
+endif
+endif
+stop
+@enduml

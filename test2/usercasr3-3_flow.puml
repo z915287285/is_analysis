@@ -1,0 +1,10 @@
+@startuml
+start
+:Reader;
+if (Select ReaderState) then(未借阅)
+:Borrow Book;
+else(已借阅)
+:需归还书籍后才可借阅;
+endif
+stop
+@enduml

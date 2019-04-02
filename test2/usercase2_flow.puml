@@ -1,0 +1,27 @@
+@startuml
+start
+:InfoManager;
+if()then(读者信息管理)
+fork
+:增加读者信息;
+fork again
+:删除读者信息;
+fork again
+:查询读者信息;
+fork again
+:修改读者信息;
+end fork
+else(图书管理员信息管理)
+fork
+:增加图书管理员信息;
+fork again
+:删除图书管理员信息;
+fork again
+:查询图书图书管理员信息;
+fork again
+:修改图书图书管理员信息;
+end fork
+endif
+stop
+
+@enduml

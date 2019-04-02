@@ -1,0 +1,15 @@
+@startuml
+start
+:Library_Admin;
+fork
+:查阅书籍;
+fork again
+:增加书籍;
+fork again
+:删除书籍;
+fork again
+:替换书籍;
+end fork
+stop
+
+@enduml

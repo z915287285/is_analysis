@@ -1,0 +1,16 @@
+@startuml
+start
+:InfoManager;
+:读者信息管理;
+fork
+:增加读者信息;
+fork again
+:删除读者信息;
+fork again
+:查询读者信息;
+fork again
+:修改读者信息;
+end fork
+stop
+
+@enduml

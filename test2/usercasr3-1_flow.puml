@@ -1,0 +1,6 @@
+@startuml
+start
+:Reader;
+:Select Book;
+stop
+@enduml

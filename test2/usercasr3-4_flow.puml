@@ -1,0 +1,9 @@
+@startuml
+start
+:Reader;
+if (Select ReaderState) then(未借阅)
+else(已借阅)
+:Back Book;
+endif
+stop
+@enduml

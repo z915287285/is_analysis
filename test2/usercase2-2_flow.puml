@@ -1,0 +1,15 @@
+@startuml
+start
+:InfoManager;
+:图书管理员信息管理;
+fork
+:增加图书管理员信息;
+fork again
+:删除图书管理员信息;
+fork again
+:查询图书图书管理员信息;
+fork again
+:修改图书图书管理员信息;
+end fork
+stop
+@enduml

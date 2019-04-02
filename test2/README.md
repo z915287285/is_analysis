@@ -83,8 +83,8 @@ rectangle {
 参与者|图书管理员 读者
 前置条件|图书管理员被授权
 后置条件|存储借书记录，更新库存
-主事件流|验证读者无未归还书籍<br>图书管理员将读者借阅信息录入系统
-备注|读者在归还书籍之前，不允许借阅
+主事件流|验证读者有无未归还书籍<br>图书管理员将读者借阅信息录入系统
+备注|图书馆开架借阅，读者找到书后办理借阅书手续
 
 “借书登记”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-1_flow.puml)如下:
 
@@ -108,13 +108,15 @@ stop
 
 “归还书籍登记”用例规约
 
+
+
 用例名称|归还借书登记
 --------|-------
 参与者|图书管理员 读者
-前置条件|读者有借阅书籍未归还
-后置条件|商家有图书馆所需书籍
-主事件流|图书管理员将读者借阅信息录入系统
-备注|读者在归还书籍之前，不允许借阅
+前置条件|图书管理员被授权
+后置条件|存储归还记录，更新库存
+主事件流|验证读者有无未归还书籍<br>图书管理员将读者归还信息录入系统
+备注|需要在读者有未归还书籍，才可归还
 
 “归还书籍登记”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-2_flow.puml)如下:
 ````
@@ -136,6 +138,14 @@ stop
 ### 3. “书籍信息管理”用例
 
 “书籍信息管理”用例规约
+
+用例名称|书籍信息管理
+--------|-------
+参与者|图书管理员
+前置条件|图书管理员得到上级批准
+后置条件|商家有图书馆所需书籍
+主事件流|1.图书管理员将新图书信息录入系统<br>2.图书管理员将删除特定图书信息<br>3.图书管理员将查看图书信息<br>4.图书管理员将更新图书信息
+备注|信息管理员给予权限之后，图书管理员可直接添加，修改，删除以及更新图书信息
 
 “书籍信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-3_flow.puml)如下:
 ````
@@ -166,6 +176,14 @@ stop
 
 “查阅读者借阅状态”用例规约
 
+用例名称|查阅读者借阅状态
+--------|-------
+参与者|图书管理员
+前置条件|图书管理员得到上级批准
+后置条件|可更新当前读者借阅状态
+主事件流|图书管理员将验证读者当前的借阅图书状态
+备注|信息管理员给予权限之后，图书管理员可直接验证读者借阅状态
+
 “查阅读者借阅状态”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-4_flow.puml)如下:
 ````
 @startuml
@@ -185,6 +203,14 @@ stop
 
 “读者信息管理”用例规约
 
+用例名称|读者信息管理
+--------|-------
+参与者|信息管理员
+前置条件|无
+后置条件|可更新读者信息
+主事件流|1.信息管理员将新读者信息录入系统<br>2.信息管理员将删除特定读者信息<br>3.信息管理员将查看读者信息<br>4.信息管理员将更新读者信息
+备注|信息管理员可直接更新验证读者信息
+
 “读者信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase2-1_flow.puml)如下:
 ````
 @startuml
@@ -202,6 +228,14 @@ stop
 ### 2. “图书管理员信息管理”用例
 
 “图书管理员信息管理”用例规约
+
+用例名称|读者信息管理
+--------|-------
+参与者|信息管理员
+前置条件|无
+后置条件|可更新图书管理员信息
+主事件流|1.信息管理员将新图书管理员信息录入系统<br>2.信息管理员将删除特定图书管理员信息<br>3.信息管理员将查看图书管理员信息<br>4.信息管理员将更新图书管理员信息
+备注|信息管理员可直接更新验证图书管理员信息
 
 “图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase2-2_flow.puml)如下:
 ````
@@ -255,9 +289,17 @@ stop
 ## **Reader(读者)**
 ### 1. “读者查阅书籍信息”用例
 
-“图书管理员信息管理”用例规约
+“读者查阅书籍信息”用例规约
 
-“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-1_flow.puml)如下:
+用例名称|读者查阅书籍信息
+--------|-------
+参与者|读者
+前置条件|读者得到信息管理员授权
+后置条件|可查看图书信息
+主事件流|读者可查看当前书籍信息
+备注|信息管理员给予权限之后，读者可直接查看图书信息
+
+“读者查阅书籍信息”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-1_flow.puml)如下:
 ````
 @startuml
 start
@@ -266,16 +308,24 @@ start
 stop
 @enduml
 ````
-“图书管理员信息管理”用例图
+“读者查阅书籍信息”用例图
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-1_flow.png)
 
 
 ### 2. “读者查看当前借阅状态”用例
 
-“图书管理员信息管理”用例规约
+“读者查看当前借阅状态”用例规约
 
-“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-2_flow.puml)如下:
+用例名称|读者查看当前借阅状态
+--------|-------
+参与者|读者
+前置条件|读者得到信息管理员授权
+后置条件|可查看借阅信息
+主事件流|读者可查看当前借阅状态<br>图书管理员可验证当前借阅状态
+备注|信息管理员给予权限之后，读者可直接查看当前借阅信息
+
+“读者查看当前借阅状态”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-2_flow.puml)如下:
 ````
 @startuml
 start
@@ -288,38 +338,54 @@ endif
 stop
 @enduml
 ````
-“图书管理员信息管理”用例图
+“读者查看当前借阅状态”用例图
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-2_flow.png)
 
 
 ### 3. “借阅书籍”用例
 
-“图书管理员信息管理”用例规约
+“借阅书籍””用例规约
 
-“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-3_flow.puml)如下:
+用例名称|借阅书籍
+--------|-------
+参与者|读者 图书管理员
+前置条件|读者得到信息管理员授权，图书管理员获得授权
+后置条件|借阅书籍，更新库存
+主事件流|>图书管理员可验证当前借阅状态,并将信息录入系统<br>读者可借阅书籍
+备注|信息管理员给予权限之后，读者可直接办理借阅手续
+
+“借阅书籍””用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-3_flow.puml)如下:
 ````
 @startuml
 start
 :Reader;
 if (Select ReaderState) then(未借阅)
-:可借阅书籍;
+:Borrow Book;
 else(已借阅)
-:需归还书籍;
+:需归还书籍后才可借阅;
 endif
 stop
 @enduml
 ````
-“图书管理员信息管理”用例图
+“借阅书籍””用例图
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-3_flow.png)
 
 
 ### 4. “归还书籍”用例
 
-“图书管理员信息管理”用例规约
+“归还书籍”用例规约
 
-“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-4_flow.puml)如下:
+用例名称|归还书籍
+--------|-------
+参与者|读者 图书管理员
+前置条件|读者得到信息管理员授权，图书管理员获得授权
+后置条件|归还书籍，更新库存
+主事件流|>图书管理员可验证当前借阅状态,并将更新读者信息<br>读者可归还书籍书籍
+备注|信息管理员给予权限之后，读者可直接办理书籍归还手续
+
+“归还书籍”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-4_flow.puml)如下:
 ````
 @startuml
 start
@@ -331,16 +397,24 @@ endif
 stop
 @enduml
 ````
-“图书管理员信息管理”用例图
+“归还书籍”用例图
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-4_flow.png)
 
 
 ### 5. “逾期申请”用例
 
-“图书管理员信息管理”用例规约
+“逾期申请”用例规约
 
-“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-5_flow.puml)如下:
+用例名称|逾期申请
+--------|-------
+参与者|读者 图书管理员
+前置条件|读者得到信息管理员授权，图书管理员获得授权
+后置条件|更新读者信息
+主事件流|>读者查阅当前借阅信息并<br>读者提交逾期申请<br>图书管理员可验证当前借阅状态,并将更新读者信息<br>读者可延期归还书籍
+备注|信息管理员给予权限之后，读者可办理逾期归还书籍手续
+
+“逾期申请”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-5_flow.puml)如下:
 ````
 @startuml
 start
@@ -356,16 +430,24 @@ endif
 stop
 @enduml
 ````
-“图书管理员信息管理”用例图
+“逾期申请”用例图
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-5_flow.png)
 
 
 ### 6. “赔偿书籍”用例
 
-“图书管理员信息管理”用例规约
+“赔偿书籍”用例规约
 
-“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-6_flow.puml)如下:
+用例名称|逾期申请
+--------|-------
+参与者|读者 图书管理员
+前置条件|读者得到信息管理员授权，图书管理员获得授权
+后置条件|更新读者信息，并更新系统库存
+主事件流|>读者查阅当前借阅信息并<br>读者提交赔偿申请<br>图书管理员可验证当前借阅状态，核实情况，以及更新读者信息<br>读者赔偿书籍
+备注|当读者超过逾期时间，或者损坏书籍将赔偿书籍
+
+“赔偿书籍”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-6_flow.puml)如下:
 ````
 @startuml
 start
@@ -385,6 +467,6 @@ endif
 stop
 @enduml
 ````
-“图书管理员信息管理”用例图
+“赔偿书籍”用例图
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-6_flow.png)

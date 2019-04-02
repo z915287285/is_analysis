@@ -76,7 +76,8 @@ rectangle {
 ## 用例规约表
 ## **Library_Admin(图书管理员)**
 ### 1. “借书登记”用例
-"借书登记"用例规约
+“借书登记”用例规约
+
 “借书登记”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-1_flow.puml)如下:
 
 ````
@@ -94,6 +95,7 @@ stop
 “借书登记”用例流程图
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-1_flow.png)
+
 ### 2. “归还书籍登记”用例
 主要职责是
 ### 3. “书籍信息管理”用例

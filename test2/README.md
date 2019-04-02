@@ -79,7 +79,7 @@ rectangle {
 "借书登记"用例规约
 “借书登记”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-1_flow.puml)如下:
 
-``
+````
 @startuml
 start
 :Library_Admin;
@@ -89,7 +89,7 @@ else(未借阅)
 :Lend Book;
 stop
 @enduml
-``
+````
 
 “借书登记”用例流程图
 

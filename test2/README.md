@@ -118,23 +118,257 @@ stop
 
 
 ### 3. “书籍信息管理”用例
-主要职责是
+
+“书籍信息管理”用例规约
+
+“书籍信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-3_flow.puml)如下:
+````
+@startuml
+start
+:Library_Admin;
+fork
+:查阅书籍;
+fork again
+:增加书籍;
+fork again
+:删除书籍;
+fork again
+:替换书籍;
+end fork
+stop
+
+@enduml
+````
+“书籍信息管理”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-3_flow.png)
+
+
+
+
 ### 4. “查阅读者借阅状态”用例
+
+“查阅读者借阅状态”用例规约
+
+“查阅读者借阅状态”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-4_flow.puml)如下:
+````
+@startuml
+start
+:Library_Admin;
+:Select ReaderState;
+stop
+@enduml
+````
+“查阅读者借阅状态”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-4_flow.png)
+
 
 ## **InfoManager(信息管理员)**
 ### 1. “读者信息管理”用例
 
+“读者信息管理”用例规约
+
+“读者信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase2-1_flow.puml)如下:
+````
+@startuml
+start
+:Library_Admin;
+:Select ReaderState;
+stop
+@enduml
+````
+“读者信息管理”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase2-1_flow.png)
+
+
 ### 2. “图书管理员信息管理”用例
+
+“图书管理员信息管理”用例规约
+
+“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase2-2_flow.puml)如下:
+````
+@startuml
+start
+:Library_Admin;
+:Select ReaderState;
+stop
+@enduml
+````
+“图书管理员信息管理”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase2-2_flow.png)
+
+以上两个用例图合并[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase2_flow.puml)
+
+````
+@startuml
+start
+:InfoManager;
+if()then(读者信息管理)
+fork
+:增加读者信息;
+fork again
+:删除读者信息;
+fork again
+:查询读者信息;
+fork again
+:修改读者信息;
+end fork
+else(图书管理员信息管理)
+fork
+:增加图书管理员信息;
+fork again
+:删除图书管理员信息;
+fork again
+:查询图书图书管理员信息;
+fork again
+:修改图书图书管理员信息;
+end fork
+endif
+stop
+
+@enduml
+````
+
+以上两个用例图合并
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase2_flow.png)
 
 ## **Reader(读者)**
 ### 1. “读者查阅书籍信息”用例
 
+“图书管理员信息管理”用例规约
+
+“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-1_flow.puml)如下:
+````
+@startuml
+start
+:Reader;
+:Select Book;
+stop
+@enduml
+````
+“图书管理员信息管理”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-1_flow.png)
+
+
 ### 2. “读者查看当前借阅状态”用例
+
+“图书管理员信息管理”用例规约
+
+“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-2_flow.puml)如下:
+````
+@startuml
+start
+:Reader;
+if (Select ReaderState) then(未借阅)
+:可借阅书籍;
+else(已借阅)
+:需归还书籍;
+endif
+stop
+@enduml
+````
+“图书管理员信息管理”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-2_flow.png)
+
 
 ### 3. “借阅书籍”用例
 
+“图书管理员信息管理”用例规约
+
+“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-3_flow.puml)如下:
+````
+@startuml
+start
+:Reader;
+if (Select ReaderState) then(未借阅)
+:可借阅书籍;
+else(已借阅)
+:需归还书籍;
+endif
+stop
+@enduml
+````
+“图书管理员信息管理”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-3_flow.png)
+
+
 ### 4. “归还书籍”用例
+
+“图书管理员信息管理”用例规约
+
+“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-4_flow.puml)如下:
+````
+@startuml
+start
+:Reader;
+if (Select ReaderState) then(未借阅)
+else(已借阅)
+:Back Book;
+endif
+stop
+@enduml
+````
+“图书管理员信息管理”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-4_flow.png)
+
 
 ### 5. “逾期申请”用例
 
+“图书管理员信息管理”用例规约
+
+“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-5_flow.puml)如下:
+````
+@startuml
+start
+:Reader;
+if (Select ReaderState) then(未借阅)
+else(已借阅)
+if(无法按时归还)then(Yes)
+:Late application;
+else(No)
+:Back Book;
+endif
+endif
+stop
+@enduml
+````
+“图书管理员信息管理”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-5_flow.png)
+
+
 ### 6. “赔偿书籍”用例
+
+“图书管理员信息管理”用例规约
+
+“图书管理员信息管理”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-6_flow.puml)如下:
+````
+@startuml
+start
+:Reader;
+if (Select ReaderState) then(未借阅)
+else(已借阅)
+if(无法按时归还)then(Yes)
+if(书籍损坏或者丢失)then(No)
+:Late application;
+else(Yes)
+:Compensation book;
+endif
+else(No)
+:Back Book;
+endif
+endif
+stop
+@enduml
+````
+“图书管理员信息管理”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase3-6_flow.png)

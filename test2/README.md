@@ -97,7 +97,26 @@ stop
 ![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-1_flow.png)
 
 ### 2. “归还书籍登记”用例
-主要职责是
+
+“归还书籍登记”用例规约
+
+“归还书籍登记”用例流程图[源码](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-2_flow.puml)如下:
+````
+@startuml
+start
+:Library_Admin;
+if (Select ReaderState) then(未借阅)
+end
+else(已借阅)
+:Return Book;
+stop
+@enduml
+````
+“归还书籍登记”用例图
+
+![image](https://github.com/z915287285/is_analysis/blob/master/test2/usercase1-2_flow.png)
+
+
 ### 3. “书籍信息管理”用例
 主要职责是
 ### 4. “查阅读者借阅状态”用例

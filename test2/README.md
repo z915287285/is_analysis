@@ -20,6 +20,9 @@ rectangle {
 actor Library_Admin
 }
 rectangle {
+actor InfoManager
+}
+rectangle {
 actor Reader
 }
 rectangle 图书管理系统用例关系图分析{
@@ -27,7 +30,11 @@ rectangle {
 Library_Admin ->(Lend Book):借书登记
 Library_Admin -->(Return Book):归还书籍登记
 Library_Admin -->(Manage Book):书籍信息管理
-Library_Admin -->(Manage ReaderInfo):读者信息管理
+Library_Admin -->(Select ReaderState):查询读者借阅状态
+}
+rectangle {
+InfoManager -->(Manage ReaderInfo):读者信息管理
+InfoManager -->(Manage Library_AdminInfo):图书管理员信息管理
 }
 rectangle {
 (Select Book)<-- Reader:读者查询书籍信息
@@ -38,6 +45,8 @@ rectangle {
 (Compensation book)<--Reader:赔偿书籍
 }
 }
+
+@enduml
 
 @enduml
 ````

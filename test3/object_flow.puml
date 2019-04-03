@@ -1,0 +1,43 @@
+@startuml
+class Library_Admin {
+  String Library_Admin_ID
+  String Name
+  String Sex
+  int Age
+  String Number
+  void Library_Admin_AddBookInfo()
+  void Library_Admin_DeleteBookInfo()
+  void Library_Admin_UpdateBookInfo()
+  void Library_Admin_SelectBookInfo()
+  void Library_Admin_LendBook()
+  void Library_Admin_ReturnBook()
+}
+class InfoManager {
+  String InfoManager_ID
+  String Name
+  String Sex
+  int Age
+  String Number
+  String address
+  String Email
+  void methods()
+}
+class Reader {
+  String Reader_ID
+  String Name
+  String Sex
+  int Age
+  String Number
+  String address
+  String Email
+  void methods()
+}
+class Book {
+  String ISBA
+  String Name
+  String Category
+  String Publisher
+  String Published-Date
+  void methods()
+}
+@enduml

@@ -1,10 +1,9 @@
 @startuml
-(*)  --> "check input"
-If "input is verbose" then
---> [Yes] "turn on verbosity"
---> "run command"
-else
---> "run command"
-Endif
--->(*)
+object Library_Admin {
+  Library_Admin_ID="L001"
+  Name="李轻柔"
+  Sex="女"
+  Age=25
+  Number="13699675688"
+}
 @enduml

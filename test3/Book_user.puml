@@ -1,10 +1,9 @@
 @startuml
-(*)  --> "check input"
-If "input is verbose" then
---> [Yes] "turn on verbosity"
---> "run command"
-else
---> "run command"
-Endif
--->(*)
+object Book {
+  ISBA=" 978-7-111-60046-6"
+  Name="PaddlePaddle深度学习实战 "
+  Category="计算机技术"
+  Publisher=" 北京：机械工业出版社"
+  Published-Date="2018.06"
+}
 @enduml

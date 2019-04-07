@@ -5,12 +5,13 @@ class Library_Admin {
   String Sex
   int Age
   String Number
-  void Library_Admin_AddBookInfo()
-  void Library_Admin_DeleteBookInfo()
-  void Library_Admin_UpdateBookInfo()
-  void Library_Admin_SelectBookInfo()
-  void Library_Admin_LendBook()
-  void Library_Admin_ReturnBook()
+  Boolean Library_Admin_AddBookInfo()
+  Boolean Library_Admin_DeleteBookInfo()
+  Boolean Library_Admin_UpdateBookInfo()
+  Boolean Library_Admin_SelectBookInfo()
+  Boolean Library_Admin_LendBook()Boolean
+  Boolean Library_Admin_ReturnBook()
+  Boolean Library_Admin_SelectReaderState()
 }
 class InfoManager {
   String InfoManager_ID
@@ -20,7 +21,14 @@ class InfoManager {
   String Number
   String address
   String Email
-  void methods()
+  Boolean InfoManager_AddReaderInfo()
+  Boolean InfoManager_DeleteReaderInfo()
+  Boolean InfoManager_UpdateReaderInfo()
+  Boolean InfoManager_SelectReaderInfo()
+  Boolean InfoManager_AddLibrary_AdminInfo()
+  Boolean InfoManager_DeleteLibrary_AdminInfo()
+  Boolean InfoManager_UpdateLibrary_AdminInfo()
+  Boolean InfoManager_SelectLibrary_AdminInfo()
 }
 class Reader {
   String Reader_ID
@@ -30,7 +38,13 @@ class Reader {
   String Number
   String address
   String Email
-  void methods()
+  String State
+  String SelectState()
+  Book SelectBook()
+  Boolean BorrowBook()
+  Boolean BackBook()
+  Boolean LateApplication()
+  Boolean CompensationBook()
 }
 class Book {
   String ISBA
@@ -38,6 +52,5 @@ class Book {
   String Category
   String Publisher
   String Published-Date
-  void methods()
 }
 @enduml

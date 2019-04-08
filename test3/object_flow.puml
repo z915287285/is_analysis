@@ -1,10 +1,14 @@
 @startuml
-class Library_Admin {
-  String Library_Admin_ID
+class Person {
   String Name
   String Sex
   int Age
   String Number
+  String address
+  String Email
+}
+class Library_Admin {
+  String Library_Admin_ID
   Boolean Library_Admin_AddBookInfo()
   Boolean Library_Admin_DeleteBookInfo()
   Boolean Library_Admin_UpdateBookInfo()
@@ -15,12 +19,6 @@ class Library_Admin {
 }
 class InfoManager {
   String InfoManager_ID
-  String Name
-  String Sex
-  int Age
-  String Number
-  String address
-  String Email
   Boolean InfoManager_AddReaderInfo()
   Boolean InfoManager_DeleteReaderInfo()
   Boolean InfoManager_UpdateReaderInfo()
@@ -32,12 +30,6 @@ class InfoManager {
 }
 class Reader {
   String Reader_ID
-  String Name
-  String Sex
-  int Age
-  String Number
-  String address
-  String Email
   String State
   String SelectState()
   Book SelectBook()
@@ -52,6 +44,8 @@ class Book {
   String Category
   String Publisher
   String Published-Date
-
 }
+Person <|-- Library_Admin
+Person <|-- InfoManager
+Person <|-- Reader
 @enduml

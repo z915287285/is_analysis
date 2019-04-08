@@ -27,23 +27,25 @@ actor Reader
 }
 rectangle 图书管理系统用例关系图分析{
 rectangle {
-Library_Admin ->(Lend Book):借书登记
-Library_Admin -->(Return Book):归还书籍登记
-Library_Admin -->(Manage Book):书籍信息管理
-Library_Admin -->(Select ReaderState):查询读者借阅状态
+Library_Admin ->(借书登记)
+Library_Admin -->(归还书籍登记)
+Library_Admin -->(书籍信息管理)
+Library_Admin -->(查询读者借阅状态)
 }
 rectangle {
-InfoManager -->(Manage ReaderInfo):读者信息管理
-InfoManager -->(Manage Library_AdminInfo):图书管理员信息管理
+InfoManager -->(读者信息管理)
+InfoManager -->(图书管理员信息管理)
 }
 rectangle {
-(Select Book)<-- Reader:读者查询书籍信息
-(Select State)<-- Reader:读者查看当前借阅状态
-(Borrow Book)<-- Reader:借阅书籍
-(Back Book)<-- Reader:归还书籍
-(Late application)<-- Reader:逾期申请
-(Compensation book)<--Reader:赔偿书籍
+(读者查询书籍信息)<-- Reader
+(读者查看当前借阅状态)<-- Reader
+(借阅书籍)<-- Reader
+(归还书籍)<-- Reader
+(逾期申请)<-- Reader
+(赔偿书籍)<--Reader
 }
+}
+@enduml
 }
 
 @enduml

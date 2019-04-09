@@ -98,7 +98,7 @@ class 罚款细则{
 @enduml
 ```
 ### 类图如下
-![image](https://github.com/201610414311/is_analysis/blob/master/test3/class.png)
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/class_flow.png)
 ### 类图说明
 <h4>该类图列出了图书馆系统的主要类，及其类之间的依赖关系、聚合关系、组合关系等。从类图中可以很
 清楚的看出维护图书、登记赔偿、借出图书、维护读者信息等类都是依赖于图书管理员这个类来实现的。还有
@@ -110,41 +110,66 @@ class 罚款细则{
 <h4>源码如下：
 ```
 @startuml
-
-
-object 图书管理员 {
-  姓名
-  员工号
+object Library_Admin {
+  Library_Admin_ID="L001"
+  Name="李轻柔"
+  Sex="女"
+  Age=25
+  Number="13699675688"
+  address="四川省成都市龙泉驿"
+  Email="zz@163.com"
 }
 @enduml
 ```
 <h4>对象图如下:
-![image](https://github.com/201610414311/is_analysis/blob/master/test3/object1.png)
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/Library_Admin_user.png)
 ### 读者的对象图
 <h4>源码如下:
 ```
 @startuml
-
-object 读者 {
-  姓名
-  学号
-  联系方式
+object Reader {
+  Reader_ID="000021"
+  Name="陈光"
+  Sex="男
+  Age=20
+  Number="13678654955"
+  address="四川省成都市龙泉驿"
+  Email="7895@163.com"
+  State="No"
 }
 @enduml
 ```
 <h4>类图如下:
-![image](https://github.com/201610414311/is_analysis/blob/master/test3/object2.png)
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/Reader_user.png)
 ### 图书的对象图
 <h4>源码如下:
 ```
 @startuml
-object 添加图书{
-种类
-价格
-出版社
+object Book {
+  ISBA=" 978-7-111-60046-6"
+  Name="PaddlePaddle深度学习实战 "
+  Category="计算机技术"
+  Publisher=" 北京：机械工业出版社"
+  Published-Date="2018.06"
 }
 @enduml
 ```
 <h4>类图如下:
-![image](https://github.com/201610414311/is_analysis/blob/master/test3/object3.png)
-
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/Book_user.png)
+### 信息管理员的对象图
+<h4>源码如下:
+```
+@startuml
+object InfoManager {
+  InfoManager_ID="001"
+  Name="刘辉"
+  Sex="男"
+  Age=30
+  Number="17699654688"
+  address="成都市青白江区"
+  Email="ppq@163.com"
+}
+@enduml
+```
+<h4>类图如下:
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/InfoManager_user.png)

@@ -98,7 +98,7 @@ class 罚款细则{
 @enduml
 ```
 ### 类图如下
-![image](https://github.com/z915287285/is_analysis/blob/master/test3/class_flow.png)
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/class.png)
 ### 类图说明
 <h4>该类图列出了图书馆系统的主要类，及其类之间的依赖关系、聚合关系、组合关系等。从类图中可以很
 清楚的看出维护图书、登记赔偿、借出图书、维护读者信息等类都是依赖于图书管理员这个类来实现的。还有
@@ -122,7 +122,7 @@ object Library_Admin {
 @enduml
 ```
 <h4>对象图如下:
-![image](https://github.com/z915287285/is_analysis/blob/master/test3/Library_Admin_user.png)
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/object4.png)
 ### 读者的对象图
 <h4>源码如下:
 ```
@@ -140,7 +140,7 @@ object Reader {
 @enduml
 ```
 <h4>类图如下:
-![image](https://github.com/z915287285/is_analysis/blob/master/test3/Reader_user.png)
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/object3.png)
 ### 图书的对象图
 <h4>源码如下:
 ```
@@ -155,7 +155,7 @@ object Book {
 @enduml
 ```
 <h4>类图如下:
-![image](https://github.com/z915287285/is_analysis/blob/master/test3/Book_user.png)
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/object1.png)
 ### 信息管理员的对象图
 <h4>源码如下:
 ```
@@ -172,4 +172,4 @@ object InfoManager {
 @enduml
 ```
 <h4>类图如下:
-![image](https://github.com/z915287285/is_analysis/blob/master/test3/InfoManager_user.png)
+![image](https://github.com/z915287285/is_analysis/blob/master/test3/object2.png)

@@ -12,68 +12,101 @@
 + 整个文档要汇总到REMADE.md文本文件中进行说明，说明文件用Markdown格式编写。
 ##  图书管理系统的类图
 -------------------------
-### 1.1 类图plantUML源码如下：
+### 类图plantUML源码如下：
 ```
 @startuml
-class 图书管理员{
-姓名
-员工号
+class Person {
+  String Name
+  String Sex
+  int Age
+  String Number
+  String address
+  String Email
 }
-class 添加图书{
-账单
-书籍种类
+class Library_Admin {
+  String Library_Admin_ID
+  Boolean Library_Admin_AddBookInfo()
+  Boolean Library_Admin_DeleteBookInfo()
+  Boolean Library_Admin_UpdateBookInfo()
+  Boolean Library_Admin_SelectBookInfo()
+  Boolean Library_Admin_LendBook()Boolean
+  Boolean Library_Admin_ReturnBook()
+  Boolean Library_Admin_SelectReaderState()
 }
-class 图书编目{
-资源名称
-国际出版号
-所在书架编号
+class InfoManager {
+  String InfoManager_ID
+  Boolean InfoManager_AddReaderInfo()
+  Boolean InfoManager_DeleteReaderInfo()
+  Boolean InfoManager_UpdateReaderInfo()
+  Boolean InfoManager_SelectReaderInfo()
+  Boolean InfoManager_AddLibrary_AdminInfo()
+  Boolean InfoManager_DeleteLibrary_AdminInfo()
+  Boolean InfoManager_UpdateLibrary_AdminInfo()
+  Boolean InfoManager_SelectLibrary_AdminInfo()
 }
-class 维护图书
-class 淘汰旧书
-class 登记赔偿
-class 借出图书{
+class Reader {
+  String Reader_ID
+  String State
+  String SelectState()
+  Book SelectBook()
+  Boolean BorrowBook()
+  Boolean BackBook()
+  Boolean LateApplication()
+  Boolean CompensationBook()
+}
+class Book {
+  String ISBA
+  String Name
+  String Category
+  String Publisher
+  String Published-Date
+}
+Person <|-- Library_Admin
+Person <|-- InfoManager
+Person <|-- Reader
+
+
+Book - "*"预定记录:被预定
+Library_Admin"*" - "1"InfoManager:授权
+Reader"*" - "1"Library_Admin:注册
+Reader"1" - "*"预定记录
+Reader--借书记录
+Reader--还书记录
+借书记录"1" -- "0.1"逾期记录
+借书记录"*" - "1"Library_Admin:登记
+
+逾期记录"*" - "0.1"罚款细则:使用
+
+class 预定记录{
+预定日期
+}
+class 借书记录{
 借书日期
 归还日期
 }
-class 读者{
-姓名
-学号
-联系方式
-已借图书数
+class 还书记录{
+归还日期
 }
-class 登录
-class 维护读者信息
-class 预定图书
-class 信息管理
-class 借书记录
-class 个人基本信息管理
+class 逾期记录{
+逾期天数
+}
 
-图书管理员 -- 维护读者信息
+class 罚款细则{
+}
 
-图书管理员 -- 登记赔偿:1
-图书管理员 - 维护图书:1           1...*
-图书管理员 -- 借出图书
-维护图书 <|-- 添加图书
-维护图书 <|-- 图书编目
-维护图书 <|- 淘汰旧书
-借出图书 *-- 预定图书
-信息管理- 预定图书:1             *
-信息管理 -- 登录
-登录 *-- 读者:1
-信息管理 o-- 借书记录
-信息管理 o-- 个人基本信息管理
+
 @enduml
 ```
-### 1.2.类图如下
+### 类图如下
 ![image](https://github.com/201610414311/is_analysis/blob/master/test3/class.png)
-### 1.3.类图说明
+### 类图说明
 <h4>该类图列出了图书馆系统的主要类，及其类之间的依赖关系、聚合关系、组合关系等。从类图中可以很
 清楚的看出维护图书、登记赔偿、借出图书、维护读者信息等类都是依赖于图书管理员这个类来实现的。还有
 读者类与登录类之间的组合关系，读者通过登录图书管理系统之后才能继续预定书、信息管理等类的操作。
 
-2：图书馆系统的对象图
+## 图书馆系统的对象图
 -------------------------
-### 2.1 类图书管理员的对象图
+### 图书管理员的对象图
 <h4>源码如下：
 ```
 @startuml
@@ -87,7 +120,7 @@ object 图书管理员 {
 ```
 <h4>对象图如下:
 ![image](https://github.com/201610414311/is_analysis/blob/master/test3/object1.png)
-### 2.2 类读者的对象图
+### 读者的对象图
 <h4>源码如下:
 ```
 @startuml
@@ -101,7 +134,7 @@ object 读者 {
 ```
 <h4>类图如下:
 ![image](https://github.com/201610414311/is_analysis/blob/master/test3/object2.png)
-### 2.3 类添加图书的对象图
+### 图书的对象图
 <h4>源码如下:
 ```
 @startuml
@@ -114,34 +147,4 @@ object 添加图书{
 ```
 <h4>类图如下:
 ![image](https://github.com/201610414311/is_analysis/blob/master/test3/object3.png)
-### 2.4  借出图书类的对象图
-<h4>源码如下:
-```
-@startuml
-object 借出图书{
-借书日期
-归还日期
-书号
-借书人姓名
-借书人学号
-借书人联系方式
-}
-@enduml
-```
-<h4>对象图如下:
-![image](https://github.com/201610414311/is_analysis/blob/master/test3/object4.png)
-### 2.5 信息管理类的对象图
-<h4>源码如下：
-```
-@startuml
-object 信息管理{
-用户姓名
-用户学号
-用户联系方式
-借书记录
-还书记录
-}
-@enduml
-```
-<h4>对象图如下:
-![image](https://github.com/201610414311/is_analysis/blob/master/test3/object5.png)
+

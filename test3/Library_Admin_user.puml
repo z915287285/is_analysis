@@ -5,5 +5,7 @@ object Library_Admin {
   Sex="女"
   Age=25
   Number="13699675688"
+  address="四川省成都市龙泉驿"
+  Email="zz@163.com"
 }
 @enduml

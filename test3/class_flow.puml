@@ -48,4 +48,35 @@ class Book {
 Person <|-- Library_Admin
 Person <|-- InfoManager
 Person <|-- Reader
+
+
+Book - "*"预定记录:被预定
+Library_Admin"*" - "1"InfoManager:授权
+Reader"*" - "1"Library_Admin:注册
+Reader"1" - "*"预定记录
+Reader--借书记录
+Reader--还书记录
+借书记录"1" -- "0.1"逾期记录
+借书记录"*" - "1"Library_Admin:登记
+
+逾期记录"*" - "0.1"罚款细则:使用
+
+class 预定记录{
+预定日期
+}
+class 借书记录{
+借书日期
+归还日期
+}
+class 还书记录{
+归还日期
+}
+class 逾期记录{
+逾期天数
+}
+
+class 罚款细则{
+}
+
+
 @enduml

@@ -107,7 +107,7 @@ class 罚款细则{
 ## 图书馆系统的对象图
 -------------------------
 ### 图书管理员的对象图
-<h4>源码如下：
+### 源码如下：
 ```
 @startuml
 object Library_Admin {
@@ -121,10 +121,10 @@ object Library_Admin {
 }
 @enduml
 ```
-<h4>对象图如下:
+### 对象图如下:
 ![image](https://github.com/z915287285/is_analysis/blob/master/test3/object4.png)
 ### 读者的对象图
-<h4>源码如下:
+### 源码如下:
 ```
 @startuml
 object Reader {
@@ -139,10 +139,10 @@ object Reader {
 }
 @enduml
 ```
-<h4>类图如下:
+### 对象图如下:
 ![image](https://github.com/z915287285/is_analysis/blob/master/test3/object3.png)
 ### 图书的对象图
-<h4>源码如下:
+### 源码如下:
 ```
 @startuml
 object Book {
@@ -154,10 +154,10 @@ object Book {
 }
 @enduml
 ```
-<h4>类图如下:
+### 对象图如下:
 ![image](https://github.com/z915287285/is_analysis/blob/master/test3/object1.png)
 ### 信息管理员的对象图
-<h4>源码如下:
+### 源码如下:
 ```
 @startuml
 object InfoManager {
@@ -171,5 +171,5 @@ object InfoManager {
 }
 @enduml
 ```
-<h4>类图如下:
+### 对象图如下:
 ![image](https://github.com/z915287285/is_analysis/blob/master/test3/object2.png)

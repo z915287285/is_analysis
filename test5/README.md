@@ -13,56 +13,145 @@
 ## 1.数据库表设计
 
 ## 1.1. 图书表(Book)
+
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ISBN|varchar2(100)|主键|否||||
-|Name|varchar2(100)| |否||||
-|Category|varchar2(100)| |是||||
-|Publisher|varchar2(100)| |是||||
-|Publisher-Date|date| |是||||
+|ISBN|varchar2(100)|主键|否|||图书标识符|
+|Name|varchar2(100)| |否|||图书名称|
+|Category|varchar2(100)| |是|||图书类别|
+|Publisher|varchar2(100)| |是|||出版社|
+|Publisher-Date|date| |是|||出版时间|
 |Stock|int| |否|10||图书库存|
+|Credit_Category|int| |否|5||征信类别：五个等级，低于3的有借阅限制<br>|
+
 ## 1.2. 读者表(Reader)
+
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|Reader_ID|varchar2(100)|主键|否||||
-|Name|varchar2(100)| |否||||
-|Sex|varchar2(100)| |否||||
-|Age|int| |是||||
-|Number|varchar2(100)| |否||||
-|address|varchar2(100)| |是||||
-|Email|varchar2(100)| |是||||
-|State|varchar2(100)| |否||||
+|Reader_ID|varchar2(100)|主键|否|||读者ID|
+|Name|varchar2(100)| |否|||姓名|
+|Sex|varchar2(100)| |否|||性别|
+|Age|int| |是|||年龄|
+|Number|varchar2(100)| |否|||电话号码（必填信息）|
+|address|varchar2(100)| |是|||地址信息|
+|Email|varchar2(100)| |是|||电子邮箱|
+|State|int| |否|0||借阅状态:<br>0-未借阅<br>1-已借阅|
+
 ## 1.3. 图书管理员表(Library_Admin)
+
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|Library_Admin_ID|varchar2(100)|主键|否||||
-|Name|varchar2(100)| |否||||
-|Sex|varchar2(100)| |否||||
-|Age|int| |是||||
-|Number|varchar2(100)| |否||||
-|address|varchar2(100)| |是||||
-|Email|varchar2(100)| |是||||
+|Library_Admin_ID|varchar2(100)|主键|否|||图书管理员ID|
+|Name|varchar2(100)| |否|||姓名|
+|Sex|varchar2(100)| |否|||性别|
+|Age|int| |是|||年龄|
+|Number|varchar2(100)| |否|||手机号码（必填信息）|
+|address|varchar2(100)| |是|||地址|
+|Email|varchar2(100)| |是|||电子邮箱|
+
 ## 1.4. 信息管理员表(InfoManager)
+
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|InfoManager_ID|varchar2(100)|主键|否||||
-|Name|varchar2(100)| |否||||
-|Sex|varchar2(100)| |否||||
-|Age|int| |是||||
-|Number|varchar2(100)| |否||||
-|address|varchar2(100)| |是||||
-|Email|varchar2(100)| |是||||
+|InfoManager_ID|varchar2(100)|主键|否|||信息管理员ID|
+|Name|varchar2(100)| |否|||姓名|
+|Sex|varchar2(100)| |否|||性别|
+|Age|int| |是|||年龄|
+|Number|varchar2(100)| |否|||手机号码（必填信息）|
+|address|varchar2(100)| |是|||地址|
+|Email|varchar2(100)| |是|||电子邮箱|
+
 ## 1.5. 借阅表(Table_Lend)
+
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
-|ISBN|varchar2(100)|主键|否||||
-|Reader_ID|varchar2(100)||否||||
+|:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
+|ISBN|varchar2(100)|主键|否|||图书标识符|
+|Reader_ID|varchar2(100)||否|||读者ID|
 |State|int||否|0||0-未被借出<br>1-已被借出|
 |Lend_Date|date||是|||借出图书时间|
 |Back_Date|date||是|||归还图书时间|
 |Overdue_State|int||是|||0-未逾期<br>1-逾期|
+
 ## 1.6. 预定表(Book_book)
+
 |字段|类型|主键，外键|可以为空|默认值|约束|说明|
 |:-------:|:-------------:|:------:|:----:|:---:|:----:|:-----|
-|ISBN|varchar2(100)|主键|否||||
-|Reader_ID|varchar2(100)| |否||||
-|State|int| |否|0||0-未被预定<br>1-已被预定|
+|ISBN|varchar2(100)|主键|否|||读书标识符|
+|Reader_ID|varchar2(100)| |否|||读者ID|
+
+## 2. 界面设计
+##  查询书籍界面设计
+![image](https://github.com/z915287285/is_analysis/blob/master/test5/ui.png)
+
+- 用例图参见：查询书籍用例
+- 类图参见：图书管理员类、图书类
+- 顺序图参见：查询书籍顺序图
+- API接口如下：
+
+1.查询图书信息
+- 功能：用于查看图书信息
+- 请求地址：http://127.0.0.1:32767/api/research
+- 请求方式：post
+- 请求参数：
+
+| 参数名  | 必填 | 说明|
+|------|-------|------|
+| ISBN  | 是 | 用于搜索该书信息|
+| 请求方法 | 是 | 固定为“post”|
+- 返回实例：
+```
+{
+"info": "图书详细信息如下",
+    "data": {
+        "bookName": "《老人与海》",
+        "bookId": "123",
+        "addDate": "2019-4-23",
+        "isOld":"yes",
+        },
+    "code": 200
+}
+```
+- 返回参数说明：
+
+| 参数名  | 说明 |
+|------|-------|
+| bookName  | 即将淘汰书名的名称 |
+| bookId | 淘汰书籍的编号 |
+| addDate | 该书籍的添加日期 |
+| isOld| 该是是否被判定为老旧 |
+
+ 2 删除该淘汰图书
+- 功能：用于删除已被认定为将要淘汰的图书
+- 请求地址：http://127.0.0.1:32767/api/delete
+- 请求方式：get
+- 请求参数：
+
+
+| 参数名  | 必填 | 说明|
+|------|-------|------|
+| 图书编号  | 是 | 用于搜索该书信息|
+| 图书状态 | 是 | 删除该图书的“可借”状态|
+| 请求方法 | 是 | 固定为“get”|
+
+- 返回实例：
+```
+{
+"info": "图书删除成功",
+    "data": {
+        "bookName": "《老人与海》",
+        "bookId": "123",
+        "deleteDate": "2019-4-23",
+        },
+    "code": 200
+}
+```
+- 返回参数说明：
+
+| 参数名  | 说明 |
+|------|-------|
+| bookName  | 即将淘汰书名的名称 |
+| bookId | 该淘汰书籍的编号 |
+| deleteDate | 该书籍的删除日期 |
+
+
+

@@ -83,6 +83,8 @@
 ##  查询书籍界面设计
 ![image](https://github.com/z915287285/is_analysis/blob/master/test5/ui.png)
 
+
+[界面HTML](https://github.com/z915287285/is_analysis_pages/blob/master/UI/home.html)
 - 用例图参见：查询书籍用例
 - 类图参见：图书管理员类、图书类
 - 顺序图参见：查询书籍顺序图

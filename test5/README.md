@@ -90,7 +90,7 @@
 
 1.查询图书信息
 - 功能：用于查看图书信息
-- 请求地址：http://127.0.0.1:32767/api/research
+- 请求地址：http://Book_System/api/select_book
 - 请求方式：post
 - 请求参数：
 
@@ -127,7 +127,7 @@
 
  2 借阅图书
 - 功能：用于查询图书信息
-- 请求地址：http://Book_System/api/select_book
+- 请求地址：http://Book_System/api/lend_book
 - 请求方式：get
 - 请求参数：
 

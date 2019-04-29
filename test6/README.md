@@ -14,7 +14,7 @@
 
 # 2.系统总体结构
 
-![image]()
+![image](https://github.com/z915287285/is_analysis/blob/master/test6/sys.png)
 
 # 3.用例图设计
 

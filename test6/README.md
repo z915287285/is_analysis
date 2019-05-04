@@ -73,10 +73,10 @@
     |:-------:|:-------------:|:------:|:----:|:---:|:----:|:----------|
     |STUDENT_ID|VARCHAR2(50 BYTE)|联合主键1，外键|否| | | 学生的学号，STUDENTS表外键|
     |TEST_ID|NUMBER(6,0)|联合主键2，外键|否| | | 实验编号，TESTS表的外键|
-    |COURSE_ID|NUMBER(6,0)|联合主键3，外键|否| | | 实验编号，COURSE表的外键|
-    |PROGRAM1/RATE1|NUMBER| |是|空| | 评分标准1以及对应项占比1，这个值为空表示未设置评分项|
-    |PROGRAM2/RATE2|NUMBER| |是|空| | 评分标准2以及对应项占比2，这个值为空表示未设置评分项|
-    |PROGRAM3/RATE3|NUMBER| |是|空| | 评分标准3以及对应项占比3，这个值为空表示未设置评分项|
+    |COURSE_ID|VARCHAR2(50 BYTE)|联合主键3，外键|否| | | 课程编号，COURSE表的外键|
+    |PROGRAM1/RATE1|VARCHAR2(50 BYTE)| |是|空| | 评分标准1以及对应项占比1，这个值为空表示未设置评分项|
+    |PROGRAM2/RATE2|VARCHAR2(50 BYTE)| |是|空| | 评分标准2以及对应项占比2，这个值为空表示未设置评分项|
+    |PROGRAM3/RATE3|VARCHAR2(50 BYTE)| |是|空| | 评分标准3以及对应项占比3，这个值为空表示未设置评分项|
     |RESULT|NUMBER|主键|是|空| 取值0-100| 分数，这个值为空表示没有批改|
     |MEMO|VARCHAR2(400 BYTE)| |是|空| | 老师对实验的评语|
     |UPDATE_DATE|DATE| |是|空| |老师批改实验的日期，为空表示未批改|
@@ -89,5 +89,17 @@
     |:-------:|:-------------:|:------:|:----:|:---:|:----:|:----------|
     |TEST_ID|NUMBER(6,0)|主键|否| | | 实验编号|
     |TITLE|VARCHAR2(100 BYTE)| |否| | | 实验名称|
+
+<div id="COURSES"></div>
+
+- ## COURSE表（课程表）
+
+    |字段|类型|主键，外键|可以为空|默认值|约束|说明|
+    |:-------:|:-------------:|:------:|:----:|:---:|:----:|:----------|
+    |COURSE_ID|VARCHAR2(50 BYTE)|主键|否| | | 课程的编号|
+    |TEACHER_ID|VARCHAR2(50 BYTE)|联合主键1，外键|否| | | 老师的编号，TEACHER表的外键|
+    |COURSE_NAME|VARCHAR2(50 BYTE)| |否| | | 课程名称|
+    |TERM|VARCHAR2(50 BYTE)| |否| | | 开课学期|
+    |DEPARTMENT|VARCHAR2(400 BYTE)| |否| | | 开课学院|
 
 # 6.用例及界面详细设计

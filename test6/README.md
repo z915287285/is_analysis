@@ -20,7 +20,7 @@
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test6/Usecase.png)
 
-# 4.类图设计
+# 4.类图设计[源码](https://github.com/z915287285/is_analysis/blob/master/test6/class.puml)
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test6/class.png)
 

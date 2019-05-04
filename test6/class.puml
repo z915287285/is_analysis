@@ -24,6 +24,9 @@ class grades {
     <b>student_id</b> （学号）
     <b>test_id</b> （实验编号）
     <b>course_id</b>（课程编号）
+    program1/rate1(评分项1以及比率1)
+    program2/rate2(评分项2以及比率2)
+    program3/rate3(评分项3以及比率3)
     result （分数）
     memo （评价）
     update_date （评改日期）
@@ -35,6 +38,7 @@ class tests {
 }
 class course{
     <b>course_id</b>（课程编号）
+    <b>teacher_id</b>（授课教师编号）
     course_name（课程名称）
     term（学期）
     department（所属学院）

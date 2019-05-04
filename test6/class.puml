@@ -38,7 +38,7 @@ class tests {
 }
 class course{
     <b>course_id</b>（课程编号）
-    <b>teacher_id</b>（授课教师编号）
+    <b>teacher_id</b>（授课教师工号）
     course_name（课程名称）
     term（学期）
     department（所属学院）

@@ -22,6 +22,8 @@
 
 # 4.类图设计
 
+![image](https://github.com/z915287285/is_analysis/blob/master/test6/class.png)
+
 # 5.数据库设计
 
 # 6.用例及界面详细设计

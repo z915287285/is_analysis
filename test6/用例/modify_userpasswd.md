@@ -17,7 +17,7 @@
 无
 
 ## 3. 界面设计
-- 界面参照: https://zwdbox.github.io/is_analysis/test6/ui/顶部菜单.html
+- 界面参照: https://github.com/z915287285/is_analysis/test6/ui/modify_userpasswd.html
 - API接口调用
     - 接口1：[setPassword](../接口/setPassword.md)
 

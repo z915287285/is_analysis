@@ -1,4 +1,4 @@
-﻿<!-- markdownlint-disable MD033-->
+﻿﻿<!-- markdownlint-disable MD033-->
 <!-- 禁止MD033类型的警告 https://www.npmjs.com/package/markdownlint -->
 
 # “登录”用例 [返回](../README.md)
@@ -18,7 +18,7 @@
 无
 
 ## 3. 界面设计
-- 界面参照: https://zwdbox.github.io/is_analysis/test6/ui/登录.html
+- 界面参照: https://github.com/z915287285/is_analysis/test6/ui/login_in.html
 - API接口调用
     - 接口1：[login](../接口/login.md)
 

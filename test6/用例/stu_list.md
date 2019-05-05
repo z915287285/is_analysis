@@ -17,7 +17,7 @@
 ![sequence1](../sequenceStu_list.png) 
 
 ## 3. 界面设计
-- 界面参照: https://zwdbox.github.io/is_analysis/test6/ui/index.html
+- 界面参照: https://github.com/z915287285/is_analysis/test6/ui/stu_list.html
 - API接口调用
     - 接口1：[getStudents](../接口/getStudents.md) 
 

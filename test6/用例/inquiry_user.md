@@ -1,4 +1,4 @@
-﻿<!-- markdownlint-disable MD033-->
+﻿﻿<!-- markdownlint-disable MD033-->
 <!-- 禁止MD033类型的警告 https://www.npmjs.com/package/markdownlint -->
 
 # “查看用户信息”用例 [返回](../README.md)
@@ -17,7 +17,7 @@
 无
 
 ## 3. 界面设计
-- 界面参照: https://zwdbox.github.io/is_analysis/test6/ui/顶部菜单.html
+- 界面参照: https://github.com/z915287285/is_analysis/test6/ui/top_menu.html
 - API接口调用
     - 接口1：[getUserInfo](../接口/getUserInfo.md)
 

@@ -74,3 +74,14 @@
     |COURSE_NAME|VARCHAR2(50 BYTE)| |否| | | 课程名称|
     |TERM|VARCHAR2(50 BYTE)| |否| | | 开课学期|
     |DEPARTMENT|VARCHAR2(400 BYTE)| |否| | | 开课学院|
+    
+<div id="SELECT_COURSE"></div>
+
+- ## SELECT_COURSE表（选课表）
+
+    |字段|类型|主键，外键|可以为空|默认值|约束|说明|
+    |:-------:|:-------------:|:------:|:----:|:---:|:----:|:----------|
+    |COURSE_ID|VARCHAR2(50 BYTE)|主键|否| | | 课程的编号|
+    |STUDENT_ID|VARCHAR2(50 BYTE)|联合主键1，外键|否| | | 学生的编号，STUDENT表的外键|
+    |TERM|VARCHAR2(50 BYTE)| |否| | | 开课学期|
+    

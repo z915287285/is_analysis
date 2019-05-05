@@ -38,8 +38,8 @@
     
 ## 5. 参照表
 
-- [STUDENTS](../数据库设计.md/#STUDENTS)
-- [GRADES](../数据库设计.md/#GRADES)
-- [TESTS](../数据库设计.md/#TESTS)
+- [STUDENTS](../Database.md/#STUDENTS)
+- [GRADES](../Database.md/#GRADES)
+- [TESTS](../Database.md/#TESTS)
 
 

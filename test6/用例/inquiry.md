@@ -28,3 +28,4 @@
 - [STUDENTS](../Database.md/#STUDENTS)
 - [GRADES](../Database.md/#GRADES)
 - [TESTS](../Database.md/#TESTS)
+- [COURSE](../Database.md/#COURSE)

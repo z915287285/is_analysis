@@ -1,16 +1,16 @@
 @startuml
 title 基于GitHub的实验管理平台--课程列表用例的顺序图
 actor users
-users -> students: 查看所有课程
+users -> course: 查看所有课程
 alt 如果users是老师
-	students -> course
-	course ->grades
+	course -> students
+	students ->grades
 	grades -> tests
 	tests --> users:每个课程的信息以及每位学生对应每个实验的内容与成绩
 else 如果users是students
-    users -> students
-    students ->course
-    course ->grades
+    users -> course
+    course ->students
+    students ->grades
     grades -> tests
     tests --> users:查看课程信息以及学生个人对应实验内容与成绩
 end

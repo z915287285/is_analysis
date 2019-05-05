@@ -23,7 +23,7 @@
 
 - API接口调用
 
-    - 接口1：[getProgram_rate](../接口/getProgram_rate.md)
+    - 接口1：[setProgram_rate](../接口/setProgram_rate.md)
         
         用于设置相应实验的评分标准以及占比
         

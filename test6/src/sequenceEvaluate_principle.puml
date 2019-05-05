@@ -1,0 +1,12 @@
+@startuml
+title 基于GitHub的实验管理平台--课程列表用例的顺序图
+actor users
+users -> course: 查看所有课程
+alt 如果users是老师
+	course -> tests
+	tests --> users:每个课程的信息以及对应每个实验的评定标准与占比
+else 如果users是students
+    tests --> users:无权限
+end
+
+@enduml

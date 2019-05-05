@@ -17,7 +17,7 @@
 - 无 
 
 ## 3. 界面设计
-- 界面参照: https://github.com/z915287285/is_analysis_test6/blob/master/ui/term_select.html
+- 界面参照: https://z915287285.github.io/is_analysis_test6/ui/term_select.html
 - API接口调用
     - 接口1：[getTerm_Course](../接口/getTerm_Course.md) 
 

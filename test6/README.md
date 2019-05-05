@@ -37,7 +37,7 @@
 - ### [“查看成绩”用例](./用例/inquiry.md),[界面](https://z915287285.github.io/is_analysis_test6/ui/inquiry.html)
 - ### [“修改密码”用例](./用例/modify_userpasswd.md),[界面](https://z915287285.github.io/is_analysis_test6/ui/modify_userpasswd.html)
 - ### [“修改用户信息”用例](./用例/modify_userInfor.md),[界面](https://z915287285.github.io/is_analysis_test6/ui/modify_userinfo.html)
-- ### [“查看用户信息”用例](./用例/inquiry_user.md),[界面](https://z915287285.github.io/is_analysis_test6/ui/top_menu.html)
+- ### [“查看用户信息”用例](./用例/inquiry_user.md),[界面](https://z915287285.github.io/is_analysis_test6/ui/top_meun.html)
 - ### [“登出”用例](./用例/Login_out.md),[界面](https://z915287285.github.io/is_analysis_test6/ui/login_out.html)
 - ### [“登录”用例](./用例/Login_in.md),[界面](https://z915287285.github.io/is_analysis_test6/ui/login_in.html)
 - ### [“课程列表”用例](./用例/Course_list.md),[界面](https://z915287285.github.io/is_analysis_test6/ui/index.html)

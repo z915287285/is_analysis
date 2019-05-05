@@ -17,7 +17,7 @@
 无
 
 ## 3. 界面设计
-- 界面参照: https://z915287285.github.io/is_analysis_test6/ui/top_menu.html
+- 界面参照: https://z915287285.github.io/is_analysis_test6/ui/top_meun.html
 - API接口调用
     - 接口1：[getUserInfo](../接口/getUserInfo.md)
 

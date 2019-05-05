@@ -13,18 +13,16 @@
 |主事件流| |
 |备选事件流| |
 
-## 2. 业务流程（顺序图） [源码](../src/sequenceInquiry.puml)
-![sequence1](../sequenceInquiry.png) 
+## 2. 业务流程
+- 无 
 
 ## 3. 界面设计
 - 界面参照: https://zwdbox.github.io/is_analysis/test6/ui/查看成绩.html
 - API接口调用
-    - 接口1：[getOneStudentResults](../接口/getOneStudentResults.md) 
+    - 接口1：[getTerm_Course](../接口/getTerm_Course.md) 
 
 ## 4. 算法描述
     无
     
 ## 5. 参照表
-- [STUDENTS](../Database.md/#STUDENTS)
-- [GRADES](../Database.md/#GRADES)
-- [TESTS](../Database.md/#TESTS)
+- [COURSE](../Database.md/#COURSE)

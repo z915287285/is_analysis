@@ -19,7 +19,7 @@
 
     
 ## 3. 界面设计
-- 界面参照: https://github.com/z915287285/is_analysis/blob/master/test6/ui/evaluate_grades.html
+- 界面参照: https://github.com/z915287285/is_analysis_test6/blob/master/ui/evaluate_grades.html
 
 - API接口调用
 

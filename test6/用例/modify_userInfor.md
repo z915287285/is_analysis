@@ -17,7 +17,7 @@
 无
 
 ## 3. 界面设计
-- 界面参照: https://github.com/z915287285/is_analysis/blob/master/test6/ui/modify_userinfo.html
+- 界面参照: https://github.com/z915287285/is_analysis_test6/blob/master/ui/modify_userinfo.html
 - API接口调用
     - 接口1：[getUserInfo](../接口/getUserInfo.md)
     - 接口2：[setUserInfo](../接口/setUserInfo.md)

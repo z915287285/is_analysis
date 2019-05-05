@@ -16,11 +16,11 @@
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test6/sys.png)
 
-# 3.用例图设计 [源码](https://github.com/z915287285/is_analysis/blob/master/test6/Usecase.puml)
+# 3.用例图设计 [源码](https://github.com/z915287285/is_analysis/blob/master/test6/src/Usecase.puml)
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test6/Usecase.png)
 
-# 4.类图设计[源码](https://github.com/z915287285/is_analysis/blob/master/test6/class.puml)
+# 4.类图设计[源码](https://github.com/z915287285/is_analysis/blob/master/test6/src/class.puml)
 
 ![image](https://github.com/z915287285/is_analysis/blob/master/test6/class.png)
 
